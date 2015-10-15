@@ -3,8 +3,16 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2015-10-14</lastmod>
+     <loc>https://woerwosi.com/wiki/css//</loc>
+     <lastmod>2015-10-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://woerwosi.com/wiki/css//about/</loc>
+     <lastmod>2015-10-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
