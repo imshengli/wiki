@@ -28,7 +28,9 @@ body {
     color: #178acc;
     background-color: #ffffff;
 }
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
     font-size: 20px;
 }
 .navbar-toggle {
