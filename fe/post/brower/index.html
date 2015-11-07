@@ -129,15 +129,11 @@
     
         <li class="main active"><a href="#_1">浏览器缓存原理</a></li>
         
-            <li><a href="#_2">图片描述</a></li>
+            <li><a href="#_2">缓存相关首部字段</a></li>
         
-            <li><a href="#_3">文字描述</a></li>
+            <li><a href="#_3">缓存配置的一些注意事项</a></li>
         
-            <li><a href="#_4">缓存相关首部字段</a></li>
-        
-            <li><a href="#_5">缓存配置的一些注意事项</a></li>
-        
-            <li><a href="#_6">参考链接</a></li>
+            <li><a href="#_4">参考链接</a></li>
         
     
     </ul>
@@ -145,11 +141,10 @@
                 <div class="col-md-9" role="main">
 
 <h2 id="_1">浏览器缓存原理</h2>
-<p>主要介绍一下浏览器的缓存策略；</p>
-<h3 id="_2">图片描述</h3>
+<p>主要介绍一下浏览器的缓存策略；对浏览器的请求大体如下图中所示：</p>
 <p><img alt="浏览器缓存策略" src="http://static.woerwosi.com/blog/images/2015/10/6/brower-1.png" />
 <img alt="浏览器缓存策略" src="http://static.woerwosi.com/blog/images/2015/10/6/brower-2.png" /></p>
-<h3 id="_3">文字描述</h3>
+<p>浏览器对服务器的资源请求可以分为下面几个阶段：</p>
 <p>（1）假如浏览器第一次访问服务器资源 /index.html</p>
 <p>在浏览器中没有缓存文件，直接向服务器发送请求。服务器返回：200 OK，返回index.html页面。在response header中会设置index.html页面的缓存过期时间、文件最后修改时间和根据index.html内容计算出来的实体标记Entity Tag，简称Etag。浏览器将/index.html路径的请求缓存到本地。</p>
 <p>（2）浏览器第二次访问服务器资源 /index.html</p>
@@ -171,8 +166,8 @@
 <p>情形二：若修改时间和文件内容判断有任意一个没有通过，则服务器会受理此次请求，之后的操作同（1）。</p>
 </li>
 </ul>
-<h3 id="_4">缓存相关首部字段</h3>
-<h3 id="_5">缓存配置的一些注意事项</h3>
+<h3 id="_2">缓存相关首部字段</h3>
+<h3 id="_3">缓存配置的一些注意事项</h3>
 <ul>
 <li>
 <p>只有get请求会被缓存，post请求不会</p>
@@ -187,7 +182,7 @@
 <p>观察chrome的表现发现，通过链接或者地址栏访问，会先判断缓存是否过期，再判断缓资源是否更新；F5刷新，会跳过缓存过期判断，直接请求服务器，判断资源是否更新。</p>
 </li>
 </ul>
-<h3 id="_6">参考链接</h3>
+<h3 id="_4">参考链接</h3>
 <ul>
 <li><a href="http://www.codeceo.com/article/browser-http-cache.html">http://www.codeceo.com/article/browser-http-cache.html</a></li>
 </ul></div>
