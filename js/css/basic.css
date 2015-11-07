@@ -1,11 +1,13 @@
 body {
-    background: none;
+    background: #f8f8f8;
 }
 .navbar {
     border-bottom-color: #efefef;
     box-shadow: none;
     background-image: none;
     background-color: #fff;
+    margin-bottom: 0;
+    box-shadow: rgba(150, 150, 150, 0.1) 0px 1px 1px;
 }
 .navbar-nav>li>a, .navbar-brand {
     padding-top: 20px;
@@ -66,17 +68,24 @@ body {
     border-width: 0;
     border-radius: 0;
 }
+@media (min-width: 992px) {
+    .bs-sidebar.affix {
+        top: 85px;
+    }
+}
 .bs-sidebar .nav > li > a {
     padding-top: 8px;
     padding-bottom: 8px;
+    font-size: 15.6px;
+    padding: 10px 20px;
 }
 .bs-sidenav {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-top: 10px;
 }
 .bs-sidebar .nav > li > a {
-    border-right: 1px solid #efefef;
+    border-right: 1px solid #ffffff;
 }
 .nav>li>a:hover, 
 .nav>li>a:focus {
@@ -96,6 +105,18 @@ body {
     background-color: transparent;
     text-shadow: none;
 }
+.bs-sidebar .nav > li.active {
+    background: rgba(200, 200, 200, 0.2);
+}
+@media (max-width: 992px) {
+    div.col-md-3 {
+        padding-right: 0px;
+    }
+}
+.col-md-9 {
+    background: #ffffff;
+    padding: 0 25px;
+}
 ul.nav li.main,
 .bs-sidebar .nav > .active > a, 
 .bs-sidebar .nav > .active:hover > a, 
@@ -103,16 +124,42 @@ ul.nav li.main,
     font-weight: normal;
 }
 footer.col-md-12 {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    padding-bottom: 10px;
     font-size: 14px;
+    margin-top: 20px;
+    background: #ffffff;
+    margin-bottom: 0;
 }
 footer hr {
     border-color: #efefef;
+    margin: 0;
+    padding-bottom: 15px;
 }
 footer p {
     margin-bottom: 5px;
 }
 h1, h2, h3 {
     margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+    body > div.container {
+        margin-top: 15px;
+    }
+}
+.container {
+    font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,'Microsoft YaHei',Arial,Sans-serif;
+}
+.container p {
+    margin-bottom: 15px;
+    font-size: 15.6px;
+    line-height: 1.8em;
+}
+@media (max-width: 768px) {
+    .container {        
+        padding: 0;
+    }
+    .col-md-9 {
+        padding: 25px 10px;
+    }
 }
