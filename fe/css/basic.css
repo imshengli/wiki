@@ -110,7 +110,7 @@ body {
     margin-top: 10px;
 }
 .bs-sidebar .nav > li > a {
-    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
 }
 .nav>li>a:hover, 
 .nav>li>a:focus {
@@ -118,6 +118,10 @@ body {
 }
 .bs-sidebar .nav > li > a {
     color: #333;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .bs-sidebar .nav > li:hover > a,
 .bs-sidebar .nav > li:focus > a,
@@ -132,6 +136,11 @@ body {
 }
 .bs-sidebar .nav > li.active {
     background: rgba(200, 200, 200, 0.2);
+}
+.bs-sidebar .nav > li:hover a, 
+.bs-sidebar .nav > li.active a {
+    border-left: 1px solid;
+    border-right: 0;
 }
 @media (max-width: 992px) {
     div.col-md-3 {
@@ -174,6 +183,13 @@ h1, h2, h3 {
 }
 .container {
     font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,'Microsoft YaHei',Arial,Sans-serif;
+}
+.container .col-md-3, .container .col-md-9{
+    float: right;
+}
+.container .col-md-3 {
+    padding-left: 15px;
+    padding-right: 0;
 }
 .container p {
     margin-bottom: 15px;

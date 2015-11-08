@@ -127,11 +127,96 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#nginx-iis">Nginx + IIS 实现负载均衡</a></li>
+        
+            <li><a href="#_1">可能会遇到的问题</a></li>
+        
+    
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h3 id="nginx-iis">Nginx + IIS 实现负载均衡</h3>
+<p>分布式架构包含的内容有负载均衡（Load Balance）、数据库读写分离、分布式缓存Redis等；</p>
+<p>要通过Nginx实现负载均衡，需配置nginx.conf文件；配置说明如下：</p>
+<pre><code>// 下面是nginx.conf配置部分信息
+
+// 服务器集群名称为Jq_one
+upstream Jq_one {
+ 　　server  127.0.0.1:9000; // 集群服务器的信息，这里是通过一台服务器开启的两个服务
+ 　　server  127.0.0.1:8082; 
+}
+
+server {
+    listen       8083;
+    server_name  loclhost;
+    #charset     utf8;      // 在配置文件中，#代表的是注释
+
+    #access_log  logs/host.access.log main;
+
+    location / {
+        root   html;
+        index  index.asp index.html index.htm;
+        # 指向服务器集群
+        proxy_pass  http://Jq_one;
+        # 设置主机头和客户端的真实地址，以便服务器获取真实的IP
+        proxy_set_header   Host              $host;
+        proxy_set_header   X-Real-IP         $remote_addr;
+        proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+    }
+}
+</code></pre>
+
+<p>通过多次访问http://127.0.0.1:8083/，可以看到，我们的请求被分发到了8082站点和9000站点，并且第一次是8082站点第二次9000。出现这样的结果证明我们负载均衡搭建成功了。 尝试关闭其中的9000站点，然后刷新页面发现输出的http端口一直是8082，也就是说其中一个站点挂了，只要还有一个站点是好的，我们的还是可以服务。</p>
+<h4 id="_1">可能会遇到的问题</h4>
+<p>1、Q：如果站点使用了session，请求平均分配到两个站点，那么必然存在session共享问题，该如何解决？</p>
+<pre><code>A：（1）使用数据库保存session信息；（2）使用nginx将同一ip的请求分配到固定服务器，修改如下。ip_hash会计算ip对应hash值，然后分配到固定服务器：
+```
+upstream Jq_one{
+  　 server 127.0.0.1:8082;
+ 　　server 127.0.0.1:9000;
+    ip_hash;
+}
+```
+（3）搭建一台Redis服务器，对session的读取都从该Redis服务器上读取。后面的文章将介绍分布式缓存Redis的使用；
+</code></pre>
+<p>2、Q：管理员更新站点文件，该怎么操作，现在还只有两台服务器，可以手工将文件更新到两台服务器，如果是10台呢，那么手工操作必然是不可行的？</p>
+<pre><code>A：多服务器站点更新可以使用GoodSync 文件同步程序，会自动检测文件的修改新增，然后同步到其它服务器上。在linux下可以使用rsync；
+</code></pre>
+<p>3、Q：站点中的文件上传功能会将文件分配到不同的服务器，文件共享问题如何解决？</p>
+<pre><code>A：使用文件服务器将所有文件存储到该服务器上，文件操作读取写入都在该服务器上。这里同样会存在一个问题，文件服务器存在读写上限。
+</code></pre>
+<p>4、Q：负载的服务器配置不一样，有的高有的低可不可以让配置高的服务器处理请求多一些？</p>
+<pre><code>A：负载均衡有好几种算法：轮转法，散列法，最少连接法，最低缺失法，最快响应法，加权法。下面配置是使用加权法来分配请求。
+```
+upstream Jq_one{
+    server 127.0.0.1:8082 weight=4;
+　　 server 127.0.0.1:9000 weight=1;
+}
+```
+通过weight设置每台服务器分配请求站的权重，值越高分配的越多。
+</code></pre>
+<p>5、Q：由于请求是经过Nginx转发过来的，可以在代码里面获取到用户请求的实际ip地址吗？</p>
+<pre><code>A：答案是肯定的，在localtion节点设置如下请求头信息
+```
+#设置主机头和客户端真实地址，以便服务器获取客户端真实IP
+proxy_set_header   Host             $host; 
+proxy_set_header   X-Real-IP        $remote_addr; 
+proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+```
+代码里面通过Request.Headers["X-Real-IP"]，就能获取到真实ip
+</code></pre>
+<p>6、Q：Nginx实现静态文件(image,js,css)缓存？</p>
+<pre><code>A：在server节点下添加新的localtion
+```
+#静态资源缓存设置
+location ~ \.(jpg|png|jpeg|bmp|gif|swf|css)$ { 
+    expires 30d;
+    root /nginx-1.9.3/html;#root:  #静态文件存在地址，这里设置在/nginx-1.9.3/html下
+    break;
+} 
+```
+</code></pre></div>
             
         </div>
 
