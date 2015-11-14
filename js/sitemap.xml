@@ -4,15 +4,37 @@
     
     <url>
      <loc>http://imshengli.com/wiki/js//</loc>
-     <lastmod>2015-11-11</lastmod>
+     <lastmod>2015-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
+    <url>
+     <loc>http://imshengli.com/wiki/js//basic/concept/</loc>
+     <lastmod>2015-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://imshengli.com/wiki/js//basic/array/</loc>
+     <lastmod>2015-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://imshengli.com/wiki/js//basic/string/</loc>
+     <lastmod>2015-11-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
     <url>
      <loc>http://imshengli.com/wiki/js//about/</loc>
-     <lastmod>2015-11-11</lastmod>
+     <lastmod>2015-11-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

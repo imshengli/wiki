@@ -6,17 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="ZhangShengli">
-        <link rel="canonical" href="http://imshengli.com/wiki/js/about/">
-        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="canonical" href="http://imshengli.com/wiki/js/basic/array/">
+        <link rel="shortcut icon" href="../../../../favicon.png">
         
 
-	<title>关于 - JavaScript</title>
+	<title>数组 - JavaScript</title>
 
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../css/basic.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/basic.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -45,7 +45,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href="..">JavaScript</a>
+            <a class="navbar-brand" href="../..">JavaScript</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -56,30 +56,30 @@
                 
                 
                     <li >
-                        <a href="..">首页</a>
+                        <a href="../..">首页</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">基础 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../basic/concept/">基本概念</a>
+    <a href="../concept/">基本概念</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">数组</a>
 </li>
 
                         
                             
 <li >
-    <a href="../basic/array/">数组</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../basic/string/">字符串</a>
+    <a href="../string/">字符串</a>
 </li>
 
                         
@@ -88,8 +88,8 @@
                 
                 
                 
-                    <li class="active">
-                        <a href="./">关于</a>
+                    <li >
+                        <a href="../../about/">关于</a>
                     </li>
                 
                 
@@ -104,12 +104,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../basic/string/">
+                        <a rel="next" href="../concept/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../string/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -134,67 +134,63 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#hic-euagrum-excussae-digitos-mirata">Hic Euagrum excussae digitos mirata</a></li>
+        <li class="main active"><a href="#array">数组（Array）</a></li>
         
-            <li><a href="#moles-cum-vulnera">Moles cum vulnera</a></li>
+            <li><a href="#_1">创建数组</a></li>
         
-            <li><a href="#numerum-quendam-inmiti">Numerum quendam inmiti</a></li>
+            <li><a href="#_2">数组属性</a></li>
         
-            <li><a href="#fors-ipsa">Fors ipsa</a></li>
+            <li><a href="#_3">数组类型检测</a></li>
+        
+            <li><a href="#_4">数组方法</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="hic-euagrum-excussae-digitos-mirata">Hic Euagrum excussae digitos mirata</h1>
-<h2 id="moles-cum-vulnera">Moles cum vulnera</h2>
-<p>Lorem markdownum telum circumsonat ille laudis, vestibus obrutaque dextra
-perpetuum quaerit gemini attenuarat mihi genitor, <em>liquidis</em>. Boves difficilem
-fuit telluris gravis <em>nec dulcis</em> inmunesque miserrima exstincto Echion vident
-ulnis consumitis petit flammiferis Iuppiter cornua <a href="http://zombo.com/">dilapsa
-amplexa</a>.</p>
-<p>Cupiens inpatiens, aut eductum rima ille sic celare, satus exanimem: tuis, cum?
-Clara abolere. Avidusque cumque <strong>monstra neque</strong> potentia strictique votorum
-splendenti adhuc, Notus. Vel postquam quater et certaminis huic eam ut nec omni
-cecidere quem; nec mihi aries missus?</p>
-<p>Et hoc mente sternit paene! Italicis insidere cum missa Byblida gestet opiferque
-parabat vocem <em>dicique</em>.</p>
-<h2 id="numerum-quendam-inmiti">Numerum quendam inmiti</h2>
-<p>Omnia plagis horror, tot Messeniaque venti sustinet <em>turbae artus</em> caeli opus
-nec! Longa gravem dextraque longius quo, constitit seu caesis Minyeides latuit.
-Petis et ante testantia ac vitae hic cum ulla potenti. Hanc inane mea! <strong>Velat
-terruerat ignes</strong> Peneia: ad ima saxoque vulnere, dedit nequit herbae
-ancipitemque alta piumque!</p>
+<h2 id="array">数组（Array）</h2>
+<hr />
 <blockquote>
-<p>Simul vidit boum, flammas et vicibus movit omnes? Suadet dominique quae non
-invitam; deque deseruere locorum servatae misit te Venerem tecta: membra <em>et</em>
-lacessas Quirini Caucasus. Serpens coniunx moratur potest tergoris tibi
-baculo: fausto, fatis, succedere postquam. Patriam valido quod gradibus,
-sciret procumbit versat pomoque si mille dixit nascuntur. Non caelo; fontemque
-Iolciacos silicem et seducunt <strong>oraque ut</strong> rosarum Haemoniae accinctus
-Calliroe, trepidantem.</p>
+<p>在JavaScript中，变量分为“基本数据类型”和“引用类型”，而数组属于引用类型；对引用类型的界定，同样适用于数组；</p>
 </blockquote>
-<h2 id="fors-ipsa">Fors ipsa</h2>
-<p>Fieri <em>indignantia novato victor</em>, dicere, Danaen durescit subeunt factus
-furialibus <em>moneo potiturque</em> meritum, sed nunc. Defecto petit iram, et tota.
-Uritur coronam <em>tectae</em> saecula dum cantus sinunt!</p>
-<ol>
-<li>Illa nunc condor est potentia fugiunt conatur</li>
-<li>Annis et versantes novissima fuit</li>
-<li>Nefandis genetrix</li>
-<li>Non hanc</li>
-<li>Nutricis est dixit Leucothoen ancipitemque obortas parum</li>
-</ol>
-<p>Ara ille bracchia. Quem acu venere qua addidit petit occidat alto qui sola,
-luctibus et possunt ferrum et natusque dereptis nemorum meum. Descendi auctor
-quod populos lacte. <em>In</em> verum vir, per tamen <strong>per</strong> dominis superi clipeo. Ego
-Sunt facis oracula multaque decipere disiectisque nubes quod praemia sub gaudere
-nece.</p>
-<p>Recentes agros. Iovis stabat, aut silicem montibus caelo gemebundus Lelegeia
-intulit conveniet sumus trunca ad pater! Per ut <strong>vela ubi</strong> victima armis
-tenebat absistite velocibus letoque voluisse Ausonio: fuit, sed arce quam
-pugnat.</p></div>
+<p>JavaScript中数组的两大特点：（1）数组中每一项可为任意类型；（2）大小可动态调整；</p>
+<h4 id="_1">创建数组</h4>
+<pre><code class="javascript">// 第一种方式：使用构造函数
+var colors = new Array();
+var animals = new Array(5); // 每项默认值为undefined
+var fruits = new Array(&quot;Apple&quot;, &quot;Orange&quot;);
+
+// 第二种方式：使用数组字面量
+var colors = [&quot;red&quot;, &quot;green&quot;, &quot;yellow&quot;];
+var names = []; 
+</code></pre>
+
+<h4 id="_2">数组属性</h4>
+<pre><code class="javascript">var colors = [&quot;red&quot;];
+console.log(colors.length); // length 可读、可写
+</code></pre>
+
+<h4 id="_3">数组类型检测</h4>
+<pre><code>// (1) 最基础的方式是使用 instanceof，一般情况下会返回true；
+//     若网页中包含多个框架时，就不一定了，此时会有不同的全局执行环境，可能会有不同版本的Array构造函数；
+console.log([&quot;red&quot;] instanceof Array); // true
+
+// (2) 另外可使用ES5提供的isArray()方法
+//     支持的浏览器有IE9+、Firefox4+、Safari5+、Opera 10.5+、Chrome等；
+console.log(Array.isArray([&quot;red&quot;]));
+
+// (3) 最安全的方式是：
+</code></pre>
+
+<h4 id="_4">数组方法</h4>
+<pre><code>// (1) 转换方法
+var colors = [&quot;red&quot;, &quot;blue&quot;];
+console.log(colors);  // [&quot;red&quot;, &quot;blue&quot;]
+console.log(colors.toString());  // red,blue  调用每一项的toString()
+console.log(colors.toLocaleString());  // red,blue
+console.log(colors.valueOf(), typeof colors.valueOf()); // [&quot;red&quot;, &quot;blue&quot;] &quot;object&quot;
+</code></pre></div>
             
         </div>
 
@@ -206,12 +202,12 @@ pugnat.</p></div>
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
-        <script>var base_url = '..';</script>
-        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-        <script src="../js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
