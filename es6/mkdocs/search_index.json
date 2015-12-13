@@ -1,0 +1,39 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "\u4e3b\u9875"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/basic/", 
+            "text": "ES6 \u57fa\u7840\u77e5\u8bc6\n\n\n1. let \u547d\u4ee4\n\n\n\uff081\uff09ES6\u65b0\u589e\u4e86\nlet\n\u547d\u4ee4\uff0c\u7c7b\u4f3c\u4e0e\nvar\n\uff0c\u4f46 let \u58f0\u660e\u7684\u53d8\u91cf\uff0c\u53ea\u5728 let \u547d\u4ee4\u6240\u5728\u7684\u4ee3\u7801\u5757\u4e2d\u4f7f\u7528\uff1b\u4f8b\u5982\uff1a\n\n\n{\n    let a = 1;\n    var b = 2;\n}\na; // ReferenceError: a is not defined\nb; // 2\n\n\n\n\nlet \u5b9a\u4e49\u53d8\u91cf\u5f88\u9002\u5408\u5728\nfor\n\u8bed\u53e5\u4e2d\u4f7f\u7528\uff1b\n\n\n\uff082\uff09let \u4e0d\u4f1a\u53d1\u751f\u201c\u53d8\u91cf\u63d0\u5347\u201d\uff0c\u4f7f\u7528\u4e4b\u524d\u5e94\u5148\u5b9a\u4e49\uff1b\n\n\nconsole.log(foo); // ReferenceError\nlet foo = 2;\n\n\n\n\n\uff083\uff09TDZ\uff1atemporal dead zone\uff0c\u6682\u65f6\u6027\u6b7b\u533a\uff1b\n\n\n\u53ea\u8981\u5757\u7ea7\u4f5c\u7528\u57df\u5185\u5b58\u5728let\u547d\u4ee4\uff0c\u5b83\u6240\u58f0\u660e\u7684\u53d8\u91cf\u5c31\u201c\u7ed1\u5b9a\u201d\uff08binding\uff09\u8fd9\u4e2a\u533a\u57df\uff0c\u4e0d\u518d\u53d7\u5916\u90e8\u7684\u5f71\u54cd\u3002\n\n\nvar tmp = 123;\nif (true) {\n  tmp = 'abc'; // ReferenceError\n  let tmp;\n}\n\n\n\n\n\u603b\u4e4b\uff0c\u6682\u65f6\u6027\u6b7b\u533a\u7684\u672c\u8d28\u5c31\u662f\uff0c\u53ea\u8981\u4e00\u8fdb\u5165\u5f53\u524d\u4f5c\u7528\u57df\uff0c\u6240\u8981\u4f7f\u7528\u7684\u53d8\u91cf\u5c31\u5df2\u7ecf\u5b58\u5728\u4e86\uff0c\u4f46\u662f\u4e0d\u53ef\u83b7\u53d6\uff0c\u53ea\u6709\u7b49\u5230\u58f0\u660e\u53d8\u91cf\u7684\u90a3\u4e00\u884c\u4ee3\u7801\u51fa\u73b0\uff0c\u624d\u53ef\u4ee5\u83b7\u53d6\u548c\u4f7f\u7528\u8be5\u53d8\u91cf\u3002\n\n\nES6\u89c4\u5b9a\u6682\u65f6\u6027\u6b7b\u533a\u548c\u4e0d\u5b58\u5728\u53d8\u91cf\u63d0\u5347\uff0c\u4e3b\u8981\u662f\u4e3a\u4e86\u51cf\u5c11\u8fd0\u884c\u65f6\u9519\u8bef\uff0c\u9632\u6b62\u5728\u53d8\u91cf\u58f0\u660e\u524d\u5c31\u4f7f\u7528\u8fd9\u4e2a\u53d8\u91cf\uff0c\u4ece\u800c\u5bfc\u81f4\u610f\u6599\u4e4b\u5916\u7684\u884c\u4e3a\u3002\n\n\n\uff084\uff09\u4e0d\u5141\u8bb8\u91cd\u590d\u58f0\u660e\n\n\nlet\u4e0d\u5141\u8bb8\u5728\u76f8\u540c\u4f5c\u7528\u57df\u5185\uff0c\u91cd\u590d\u58f0\u660e\u540c\u4e00\u4e2a\u53d8\u91cf\u3002\n\n\nfunction func(arg) {\n  let arg; // \u62a5\u9519\n}\n\nfunction func(arg) {\n  {\n    let arg; // \u4e0d\u62a5\u9519\n  }\n}\n\n\n\n\n\u5757\u7ea7\u4f5c\u7528\u57df", 
+            "title": "\u57fa\u672c\u8bed\u6cd5"
+        }, 
+        {
+            "location": "/basic/#es6", 
+            "text": "1. let \u547d\u4ee4  \uff081\uff09ES6\u65b0\u589e\u4e86 let \u547d\u4ee4\uff0c\u7c7b\u4f3c\u4e0e var \uff0c\u4f46 let \u58f0\u660e\u7684\u53d8\u91cf\uff0c\u53ea\u5728 let \u547d\u4ee4\u6240\u5728\u7684\u4ee3\u7801\u5757\u4e2d\u4f7f\u7528\uff1b\u4f8b\u5982\uff1a  {\n    let a = 1;\n    var b = 2;\n}\na; // ReferenceError: a is not defined\nb; // 2  let \u5b9a\u4e49\u53d8\u91cf\u5f88\u9002\u5408\u5728 for \u8bed\u53e5\u4e2d\u4f7f\u7528\uff1b  \uff082\uff09let \u4e0d\u4f1a\u53d1\u751f\u201c\u53d8\u91cf\u63d0\u5347\u201d\uff0c\u4f7f\u7528\u4e4b\u524d\u5e94\u5148\u5b9a\u4e49\uff1b  console.log(foo); // ReferenceError\nlet foo = 2;  \uff083\uff09TDZ\uff1atemporal dead zone\uff0c\u6682\u65f6\u6027\u6b7b\u533a\uff1b  \u53ea\u8981\u5757\u7ea7\u4f5c\u7528\u57df\u5185\u5b58\u5728let\u547d\u4ee4\uff0c\u5b83\u6240\u58f0\u660e\u7684\u53d8\u91cf\u5c31\u201c\u7ed1\u5b9a\u201d\uff08binding\uff09\u8fd9\u4e2a\u533a\u57df\uff0c\u4e0d\u518d\u53d7\u5916\u90e8\u7684\u5f71\u54cd\u3002  var tmp = 123;\nif (true) {\n  tmp = 'abc'; // ReferenceError\n  let tmp;\n}  \u603b\u4e4b\uff0c\u6682\u65f6\u6027\u6b7b\u533a\u7684\u672c\u8d28\u5c31\u662f\uff0c\u53ea\u8981\u4e00\u8fdb\u5165\u5f53\u524d\u4f5c\u7528\u57df\uff0c\u6240\u8981\u4f7f\u7528\u7684\u53d8\u91cf\u5c31\u5df2\u7ecf\u5b58\u5728\u4e86\uff0c\u4f46\u662f\u4e0d\u53ef\u83b7\u53d6\uff0c\u53ea\u6709\u7b49\u5230\u58f0\u660e\u53d8\u91cf\u7684\u90a3\u4e00\u884c\u4ee3\u7801\u51fa\u73b0\uff0c\u624d\u53ef\u4ee5\u83b7\u53d6\u548c\u4f7f\u7528\u8be5\u53d8\u91cf\u3002  ES6\u89c4\u5b9a\u6682\u65f6\u6027\u6b7b\u533a\u548c\u4e0d\u5b58\u5728\u53d8\u91cf\u63d0\u5347\uff0c\u4e3b\u8981\u662f\u4e3a\u4e86\u51cf\u5c11\u8fd0\u884c\u65f6\u9519\u8bef\uff0c\u9632\u6b62\u5728\u53d8\u91cf\u58f0\u660e\u524d\u5c31\u4f7f\u7528\u8fd9\u4e2a\u53d8\u91cf\uff0c\u4ece\u800c\u5bfc\u81f4\u610f\u6599\u4e4b\u5916\u7684\u884c\u4e3a\u3002  \uff084\uff09\u4e0d\u5141\u8bb8\u91cd\u590d\u58f0\u660e  let\u4e0d\u5141\u8bb8\u5728\u76f8\u540c\u4f5c\u7528\u57df\u5185\uff0c\u91cd\u590d\u58f0\u660e\u540c\u4e00\u4e2a\u53d8\u91cf\u3002  function func(arg) {\n  let arg; // \u62a5\u9519\n}\n\nfunction func(arg) {\n  {\n    let arg; // \u4e0d\u62a5\u9519\n  }\n}  \u5757\u7ea7\u4f5c\u7528\u57df", 
+            "title": "ES6 \u57fa\u7840\u77e5\u8bc6"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "", 
+            "title": "\u5173\u4e8e"
+        }
+    ]
+}
