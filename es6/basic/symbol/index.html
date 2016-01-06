@@ -4,19 +4,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="ECMAScript 6 basic knowledge">
+        
         <meta name="author" content="ZhangShengli">
-        
-        <link rel="shortcut icon" href="./favicon.png">
+        <link rel="canonical" href="https://imshengli.com/wiki/es6/basic/symbol/">
+        <link rel="shortcut icon" href="../../../../favicon.png">
         
 
-	<title>ES6</title>
+	<title>Symbol - ES6</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/basic.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/basic.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -45,7 +45,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">ES6</a>
+            <a class="navbar-brand" href="../..">ES6</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -56,24 +56,24 @@
                 
                 
                     <li >
-                        <a href=".">主页</a>
+                        <a href="../..">主页</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">基础知识 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="basic/basic/">语法</a>
+    <a href="../basic/">语法</a>
 </li>
 
                         
                             
-<li >
-    <a href="basic/symbol/">Symbol</a>
+<li class="active">
+    <a href="./">Symbol</a>
 </li>
 
                         
@@ -83,7 +83,7 @@
                 
                 
                     <li >
-                        <a href="about/">关于</a>
+                        <a href="../../about/">关于</a>
                     </li>
                 
                 
@@ -97,13 +97,13 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../basic/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../../about/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -125,15 +125,47 @@
 
         <div class="container">
             
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#symbol">Symbol 相关</a></li>
+        
+            <li><a href="#1">1. 概述</a></li>
+        
+            <li><a href="#2">2. 使用</a></li>
+        
+            <li><a href="#3">3. 应用</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
+<h2 id="symbol">Symbol 相关</h2>
+<hr>
 
+<h3 id="1">1. 概述</h3>
+<p>Symbol 是ES6新增的一种数据类型，表示一种“独一无二的值”，任何两个 Symbol 类型的实例都是不相等的。</p>
+<h3 id="2">2. 使用</h3>
+<pre><code class="javascript">// 创建实例
+let s = Symbol();    // 创建 Symbol 实例
+let a = Symbol('a');    // 参数只是实例的描述
 
+// 类型转换
+let str = Symbol('str');
+String(str);    // 转换为字符串
+str.toString();
+let flag = Symbol();
+Boolean(flag);    // 转换为布尔类型
+
+// 注意事项
+// (1) Symbol 实例不能和其他类型的值进行运算
+</code></pre>
+
+<h3 id="3">3. 应用</h3>
+<p>由于 Symbol 的特殊性，在一些场合中很适用。</p>
+<p>（1）用作对象的“属性名”；可解决：对象扩展时，属性被覆盖的问题；</p></div>
+            
         </div>
 
         <footer class="col-md-12">
@@ -144,12 +176,12 @@
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
