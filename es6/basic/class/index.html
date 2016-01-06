@@ -6,17 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="ZhangShengli">
-        <link rel="canonical" href="https://imshengli.com/wiki/es6/about/">
-        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="canonical" href="https://imshengli.com/wiki/es6/basic/class/">
+        <link rel="shortcut icon" href="../../../../favicon.png">
         
 
-	<title>关于 - ES6</title>
+	<title>Class - ES6</title>
 
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <link href="../css/basic.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/basic.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -45,7 +45,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href="..">ES6</a>
+            <a class="navbar-brand" href="../..">ES6</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -56,30 +56,30 @@
                 
                 
                     <li >
-                        <a href="..">主页</a>
+                        <a href="../..">主页</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">基础知识 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../basic/basic/">语法</a>
+    <a href="../basic/">语法</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Class</a>
 </li>
 
                         
                             
 <li >
-    <a href="../basic/class/">Class</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../basic/symbol/">Symbol</a>
+    <a href="../symbol/">Symbol</a>
 </li>
 
                         
@@ -88,8 +88,8 @@
                 
                 
                 
-                    <li class="active">
-                        <a href="./">关于</a>
+                    <li >
+                        <a href="../../about/">关于</a>
                     </li>
                 
                 
@@ -104,12 +104,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../basic/symbol/">
+                        <a rel="next" href="../basic/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../symbol/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -134,11 +134,34 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#class">Class 相关</a></li>
+        
+            <li><a href="#1">1. 概述</a></li>
+        
+            <li><a href="#2">2. 使用</a></li>
+        
+    
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h2 id="class">Class 相关</h2>
+<hr>
+
+<h3 id="1">1. 概述</h3>
+<p>Class，对象的模板；</p>
+<h3 id="2">2. 使用</h3>
+<pre><code>// 定义类
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    toString() {
+        return '(' + this.x + ', ' + this.y + ')';
+    }
+}
+</code></pre></div>
             
         </div>
 
@@ -150,12 +173,12 @@
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script>
-        <script>var base_url = '..';</script>
-        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-        <script src="../js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">

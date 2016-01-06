@@ -72,6 +72,12 @@
 
                         
                             
+<li >
+    <a href="../class/">Class</a>
+</li>
+
+                        
+                            
 <li class="active">
     <a href="./">Symbol</a>
 </li>
@@ -98,7 +104,7 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../basic/">
+                        <a rel="next" href="../class/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -158,13 +164,26 @@ str.toString();
 let flag = Symbol();
 Boolean(flag);    // 转换为布尔类型
 
+// 方法
+// Symbol.for(): 重用同一个Symbol值，Symbol.for 创建的是“全局环境”的；
+// Symbol.keyFor(): 返回使用Symbo.for创建的实例的 key；
+
+// 内置的 Symbol 值
+
+
 // 注意事项
-// (1) Symbol 实例不能和其他类型的值进行运算
+// (1) Symbol 实例不能和其他类型的值进行运算；
 </code></pre>
 
 <h3 id="3">3. 应用</h3>
 <p>由于 Symbol 的特殊性，在一些场合中很适用。</p>
-<p>（1）用作对象的“属性名”；可解决：对象扩展时，属性被覆盖的问题；</p></div>
+<p>（1）用作对象的“属性名”；可解决：对象扩展时，属性被覆盖的问题；</p>
+<pre><code>// 作为属性名
+
+// 属性名遍历
+</code></pre>
+
+<p>（2）用作“常量”；</p></div>
             
         </div>
 
