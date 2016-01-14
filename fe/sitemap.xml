@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://imshengli.com/wiki/fe//</loc>
-     <lastmod>2015-11-14</lastmod>
+     <lastmod>2016-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,19 @@
         
     <url>
      <loc>https://imshengli.com/wiki/fe//post/brower/</loc>
-     <lastmod>2015-11-14</lastmod>
+     <lastmod>2016-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://imshengli.com/wiki/fe//post/nginx/</loc>
-     <lastmod>2015-11-14</lastmod>
+     <lastmod>2016-01-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://imshengli.com/wiki/fe//post/cache/</loc>
+     <lastmod>2016-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -28,7 +34,7 @@
     
     <url>
      <loc>https://imshengli.com/wiki/fe//about/</loc>
-     <lastmod>2015-11-14</lastmod>
+     <lastmod>2016-01-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
