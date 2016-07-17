@@ -1,0 +1,468 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <title>2.2 Stream · NodeJS 文档整理</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="author" content="zhangshengli@imshengli.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fs.html" />
+    
+    
+    <link rel="prev" href="buffer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://imshengli.com" target="_blank" class="custom-link">ImShengli</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0. 前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    1. NodeJS入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basic/install.html">
+            
+                <a href="../basic/install.html">
+            
+                    
+                    1.1 安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basic/module.html">
+            
+                <a href="../basic/module.html">
+            
+                    
+                    1.2 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. 文件操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="buffer.html">
+            
+                <a href="buffer.html">
+            
+                    
+                    2.1 Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="stream.html">
+            
+                <a href="stream.html">
+            
+                    
+                    2.2 Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="fs.html">
+            
+                <a href="fs.html">
+            
+                    
+                    2.3 File System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="path.html">
+            
+                <a href="path.html">
+            
+                    
+                    2.4 Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="encoding.html">
+            
+                <a href="encoding.html">
+            
+                    
+                    2.5 文件编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="iterate.html">
+            
+                <a href="iterate.html">
+            
+                    
+                    2.6 实例：遍历目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    3. 网络操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    3.1 HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../network/https.html">
+            
+                <a href="../network/https.html">
+            
+                    
+                    3.2 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../network/url.html">
+            
+                <a href="../network/url.html">
+            
+                    
+                    3.3 URL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../network/query.html">
+            
+                <a href="../network/query.html">
+            
+                    
+                    3.4 Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.2 Stream</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="stream">Stream</h2><h4 id="stream&#xFF1A;&#x6570;&#x636E;&#x6D41;">Stream&#xFF1A;&#x6570;&#x636E;&#x6D41;</h4><ul><li>&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;<code>&#x5904;&#x7406;&#x5927;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</code>&#x6216;&#x8005;<code>&#x8FB9;&#x8BFB;&#x53D6;&#x8FB9;&#x5904;&#x7406;&#x6570;&#x636E;</code>&#x8FD9;&#x6837;&#x66F4;&#x9AD8;&#x6548;&#x65F6;&#xFF1B;
+</li>
+<li>API&#xFF1A;<code>createReadStream</code> &#x548C; <code>createWriteStream</code>&#xFF1B;
+</li>
+<li>&#x673A;&#x5236;&#xFF1A;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#x5DE5;&#x4F5C;&#xFF0C;&#x6240;&#x6709;Stream&#x7684;&#x5B9E;&#x4F8B;&#x90FD;&#x7EE7;&#x627F;&#x81EA;<code>EventEmitter</code>&#xFF1B;
+</li></ul>
+<h4 id="&#x53EA;&#x8BFB;&#x6570;&#x636E;&#x6D41;">&#x53EA;&#x8BFB;&#x6570;&#x636E;&#x6D41;</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> rs = fs.createReadStream(pathname);
+
+rs.on(<span class="hljs-string">&apos;data&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">chunk</span>) </span>{
+    <span class="hljs-comment">// &#x6682;&#x505C;&#x8BFB;&#x53D6;&#xFF0C;&#x5F85;doSomething&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#x518D;&#x7EE7;&#x7EED;</span>
+    rs.pause();
+    doSomething(chunk, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        rs.resume();
+    });
+});
+
+rs.on(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    cleanUp();
+});</code></pre>
+<h4 id="&#x53EA;&#x5199;&#x6570;&#x636E;&#x6D41;">&#x53EA;&#x5199;&#x6570;&#x636E;&#x6D41;</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> rs = fs.createReadStream(src);
+<span class="hljs-keyword">var</span> ws = fs.createWriteStream(dst);
+
+rs.on(<span class="hljs-string">&apos;data&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">chunk</span>) </span>{
+    <span class="hljs-comment">// &#x6839;&#x636E;.write&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6765;&#x5224;&#x65AD;&#x4F20;&#x5165;&#x7684;&#x6570;&#x636E;&#x662F;&#x5199;&#x5165;&#x76EE;&#x6807;&#x4E86;&#xFF0C;&#x8FD8;&#x662F;&#x4E34;&#x65F6;&#x653E;&#x5728;&#x7F13;&#x5B58;&#x4E86;</span>
+    <span class="hljs-keyword">if</span> (ws.write(chunk)=== <span class="hljs-literal">false</span>) {
+        rs.pause();
+    }
+});
+
+rs.on(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    ws.end();
+});
+
+<span class="hljs-comment">// &#x6839;&#x636E;drain&#x4E8B;&#x4EF6;&#x6765;&#x5224;&#x65AD;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x53EA;&#x5199;&#x6570;&#x636E;&#x6D41;&#x5DF2;&#x7ECF;&#x5C06;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5199;&#x5165;&#x76EE;&#x6807;</span>
+ws.on(<span class="hljs-string">&apos;drain&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    rs.resume();
+});</code></pre>
+<h4 id="&#x793A;&#x4F8B;&#xFF1A;&#x5927;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;">&#x793A;&#x4F8B;&#xFF1A;&#x5927;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">copy</span>(<span class="hljs-params">src, dst</span>) </span>{
+    fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">argv</span>) </span>{
+    copy(argv[<span class="hljs-number">0</span>], argv[<span class="hljs-number">1</span>]);
+}
+
+main(process.argv.slice(<span class="hljs-number">2</span>));</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;fs.createReadStream&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x53EA;&#x8BFB;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;fs.createWriteStream&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x7684;&#x53EA;&#x5199;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5E76;&#x4E14;&#x7528;pipe&#x65B9;&#x6CD5;&#x628A;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x6D41;&#x8FDE;&#x63A5;&#x4E86;&#x8D77;&#x6765;&#x3002;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x540E;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x8BF4;&#x5F97;&#x62BD;&#x8C61;&#x70B9;&#x7684;&#x8BDD;&#xFF0C;&#x6C34;&#x987A;&#x7740;&#x6C34;&#x7BA1;&#x4ECE;&#x4E00;&#x4E2A;&#x6876;&#x6D41;&#x5230;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x6876;&#x3002;</p><footer class="page-footer"><span class="copyright">COPYRIGHT &#xA9; IMSHENGLI.COM 2016 ALL RIGHTS RESERVED.</span><span class="footer-modification">&#x672C;&#x6587;&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A;
+2016-07-17 11:16:43
+</span></footer>
+
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="buffer.html" class="navigation navigation-prev " aria-label="Previous page: 2.1 Buffer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fs.html" class="navigation navigation-next " aria-label="Next page: 2.3 File System">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.2 Stream","level":"1.3.2","depth":2,"next":{"title":"2.3 File System","level":"1.3.3","depth":2,"path":"file/fs.md","ref":"file/fs.md","articles":[]},"previous":{"title":"2.1 Buffer","level":"1.3.1","depth":2,"path":"file/buffer.md","ref":"file/buffer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","tbfed-pagefooter","github","emphasize"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"COPYRIGHT &copy IMSHENGLI.COM 2016","modify_label":"本文最后修订于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/imshengli"},"sharing":{"weibo":true,"all":["weibo"]},"emphasize":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhangshengli@imshengli.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NodeJS 文档整理","language":"zh-hans","links":{"sharing":{"all":["weibo"],"facebook":false,"google":null,"twitter":false,"weibo":true},"sidebar":{"ImShengli":"http://imshengli.com"}},"gitbook":"*","description":""},"file":{"path":"file/stream.md","mtime":"2016-07-17T03:16:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-17T10:17:45.165Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
