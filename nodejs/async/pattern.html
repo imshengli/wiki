@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-hans" >
     <head>
-        <title>2.4 Path · NodeJS 文档整理</title>
+        <title>4.1 设计模式 · NodeJS 文档整理</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -53,10 +53,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="encoding.html" />
+    <link rel="next" href="exception.html" />
     
     
-    <link rel="prev" href="fs.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -148,9 +148,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../file/">
             
-                <a href="./">
+                <a href="../file/">
             
                     
                     2. 文件操作
@@ -162,9 +162,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="buffer.html">
+        <li class="chapter " data-level="1.3.1" data-path="../file/buffer.html">
             
-                <a href="buffer.html">
+                <a href="../file/buffer.html">
             
                     
                     2.1 Buffer
@@ -175,9 +175,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="stream.html">
+        <li class="chapter " data-level="1.3.2" data-path="../file/stream.html">
             
-                <a href="stream.html">
+                <a href="../file/stream.html">
             
                     
                     2.2 Stream
@@ -188,9 +188,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="fs.html">
+        <li class="chapter " data-level="1.3.3" data-path="../file/fs.html">
             
-                <a href="fs.html">
+                <a href="../file/fs.html">
             
                     
                     2.3 File System
@@ -201,9 +201,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="path.html">
+        <li class="chapter " data-level="1.3.4" data-path="../file/path.html">
             
-                <a href="path.html">
+                <a href="../file/path.html">
             
                     
                     2.4 Path
@@ -214,9 +214,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="encoding.html">
+        <li class="chapter " data-level="1.3.5" data-path="../file/encoding.html">
             
-                <a href="encoding.html">
+                <a href="../file/encoding.html">
             
                     
                     2.5 文件编码
@@ -227,9 +227,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="iterate.html">
+        <li class="chapter " data-level="1.3.6" data-path="../file/iterate.html">
             
-                <a href="iterate.html">
+                <a href="../file/iterate.html">
             
                     
                     2.6 实例：遍历目录
@@ -329,9 +329,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../async/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../async/">
+                <a href="./">
             
                     
                     4. 异步编程
@@ -343,9 +343,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../async/pattern.html">
+        <li class="chapter active" data-level="1.5.1" data-path="pattern.html">
             
-                <a href="../async/pattern.html">
+                <a href="pattern.html">
             
                     
                     4.1 设计模式
@@ -356,9 +356,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../async/exception.html">
+        <li class="chapter " data-level="1.5.2" data-path="exception.html">
             
-                <a href="../async/exception.html">
+                <a href="exception.html">
             
                     
                     4.2 异常处理
@@ -404,7 +404,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2.4 Path</a>
+        <a href=".." >4.1 设计模式</a>
     </h1>
 </div>
 
@@ -416,19 +416,42 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="path">Path</h2><p>&#x4E3B;&#x8981;&#x7528;&#x6765;&#x7B80;&#x5316;&#x8DEF;&#x5F84;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#xFF1B;</p><h4 id="pathnormalize">path.normalize</h4><p>&#x5C06;&#x4F20;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x8F6C;&#x6362;&#x4E3A;&#x6807;&#x51C6;&#x8DEF;&#x5F84;&#xFF0C;&#x5177;&#x4F53;&#x8BB2;&#x7684;&#x8BDD;&#xFF0C;&#x9664;&#x4E86;&#x89E3;&#x6790;&#x8DEF;&#x5F84;&#x4E2D;&#x7684;<code>.</code>&#x4E0E;<code>..</code>&#x5916;&#xFF0C;&#x8FD8;&#x80FD;&#x53BB;&#x6389;&#x591A;&#x4F59;&#x7684;&#x659C;&#x6760;&#x3002;</p><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> cache = {};
+                                <h2 id="&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h2><h4 id="&#x904D;&#x5386;&#x6570;&#x7EC4;">&#x904D;&#x5386;&#x6570;&#x7EC4;</h4><p>&#x540C;&#x6B65;</p><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> len = arr.length,
+    i = <span class="hljs-number">0</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">store</span>(<span class="hljs-params">key, value</span>) </span>{
-    cache[path.normalize(key)] = value;
+<span class="hljs-keyword">for</span> (; i &lt; len; ++i) {
+    arr[i] = sync(arr[i]);
 }
 
-store(<span class="hljs-string">&apos;foo/bar&apos;</span>, <span class="hljs-number">1</span>);
-store(<span class="hljs-string">&apos;foo//baz//../bar&apos;</span>, <span class="hljs-number">2</span>);
-<span class="hljs-built_in">console</span>.log(cache);  <span class="hljs-comment">// =&gt; { &quot;foo/bar&quot;: 2 }</span></code></pre>
-<blockquote><p>&#x6807;&#x51C6;&#x5316;&#x4E4B;&#x540E;&#x7684;&#x8DEF;&#x5F84;&#x91CC;&#x7684;&#x659C;&#x6760;&#x5728;Windows&#x7CFB;&#x7EDF;&#x4E0B;&#x662F;<code>\</code>&#xFF0C;&#x800C;&#x5728;*nix&#x7CFB;&#x7EDF;&#x4E0B;&#x662F;<code>/</code>&#x3002;&#x5982;&#x679C;&#x60F3;&#x4FDD;&#x8BC1;&#x4EFB;&#x4F55;&#x7CFB;&#x7EDF;&#x4E0B;&#x90FD;&#x4F7F;&#x7528;<code>/</code>&#x4F5C;&#x4E3A;&#x8DEF;&#x5F84;&#x5206;&#x9694;&#x7B26;&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x7528;<code>.replace(/\\/g, &apos;/&apos;)</code>&#x518D;&#x66FF;&#x6362;&#x4E00;&#x4E0B;&#x6807;&#x51C6;&#x8DEF;&#x5F84;&#x3002;</p></blockquote><h4 id="pathjoin">path.join</h4><p>&#x5C06;&#x4F20;&#x5165;&#x7684;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#x62FC;&#x63A5;&#x4E3A;&#x6807;&#x51C6;&#x8DEF;&#x5F84;</p><pre><code class="lang-javascript">path.join(<span class="hljs-string">&apos;foo/&apos;</span>, <span class="hljs-string">&apos;baz/&apos;</span>, <span class="hljs-string">&apos;../bar&apos;</span>); <span class="hljs-comment">// =&gt; &quot;foo/bar&quot;</span></code></pre>
-<h4 id="pathextname">path.extname</h4><p>&#x53D6;&#x5F97;&#x6587;&#x4EF6;&#x7684;&#x6269;&#x5C55;&#x540D;</p><pre><code class="lang-javascript">path.extname(<span class="hljs-string">&apos;foo/bar.js&apos;</span>); <span class="hljs-comment">// =&gt; &quot;.js&quot;</span></code></pre>
+<span class="hljs-comment">// All array items have processed.</span></code></pre>
+<p>&#x5F02;&#x6B65;</p><pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">i, len, callback</span>) </span>{
+    <span class="hljs-keyword">if</span> (i &lt; len) {
+        <span class="hljs-keyword">async</span>(arr[i], <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+            arr[i] = value;
+            next(i + <span class="hljs-number">1</span>, len, callback);
+        });
+    } <span class="hljs-keyword">else</span> {
+        callback();
+    }
+}(<span class="hljs-number">0</span>, arr.length, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// All array items have processed.</span>
+}));</code></pre>
+<p>&#x5E76;&#x884C;&#x5904;&#x7406;</p><pre><code class="lang-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">i, len, count, callback</span>) </span>{
+    <span class="hljs-keyword">for</span> (; i &lt; len; ++i) {
+        (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">i</span>) </span>{
+            <span class="hljs-keyword">async</span>(arr[i], <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+                arr[i] = value;
+                <span class="hljs-keyword">if</span> (++count === len) {
+                    callback();
+                }
+            });
+        }(i));
+    }
+}(<span class="hljs-number">0</span>, arr.length, <span class="hljs-number">0</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// All array items have processed.</span>
+}));</code></pre>
 <footer class="page-footer"><span class="copyright">COPYRIGHT &#xA9; IMSHENGLI.COM 2016 ALL RIGHTS RESERVED.</span><span class="footer-modification">&#x672C;&#x6587;&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A;
-2016-07-17 11:33:26
+2016-07-18 22:27:32
 </span></footer>
 
 
@@ -442,12 +465,12 @@ store(<span class="hljs-string">&apos;foo//baz//../bar&apos;</span>, <span class
 
             
                 
-                <a href="fs.html" class="navigation navigation-prev " aria-label="Previous page: 2.3 File System">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 4. 异步编程">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="encoding.html" class="navigation navigation-next " aria-label="Next page: 2.5 文件编码">
+                <a href="exception.html" class="navigation navigation-next " aria-label="Next page: 4.2 异常处理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -458,7 +481,7 @@ store(<span class="hljs-string">&apos;foo//baz//../bar&apos;</span>, <span class
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.4 Path","level":"1.3.4","depth":2,"next":{"title":"2.5 文件编码","level":"1.3.5","depth":2,"path":"file/encoding.md","ref":"file/encoding.md","articles":[]},"previous":{"title":"2.3 File System","level":"1.3.3","depth":2,"path":"file/fs.md","ref":"file/fs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","tbfed-pagefooter","github","emphasize"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"COPYRIGHT &copy IMSHENGLI.COM 2016","modify_label":"本文最后修订于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/imshengli"},"sharing":{"weibo":true,"all":["weibo"]},"emphasize":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhangshengli@imshengli.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NodeJS 文档整理","language":"zh-hans","links":{"sharing":{"all":["weibo"],"facebook":false,"google":null,"twitter":false,"weibo":true},"sidebar":{"ImShengli":"http://imshengli.com"}},"gitbook":"*","description":""},"file":{"path":"file/path.md","mtime":"2016-07-17T03:33:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-18T14:29:04.612Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.1 设计模式","level":"1.5.1","depth":2,"next":{"title":"4.2 异常处理","level":"1.5.2","depth":2,"path":"async/exception.md","ref":"async/exception.md","articles":[]},"previous":{"title":"4. 异步编程","level":"1.5","depth":1,"path":"async/README.md","ref":"async/README.md","articles":[{"title":"4.1 设计模式","level":"1.5.1","depth":2,"path":"async/pattern.md","ref":"async/pattern.md","articles":[]},{"title":"4.2 异常处理","level":"1.5.2","depth":2,"path":"async/exception.md","ref":"async/exception.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","tbfed-pagefooter","github","emphasize"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"COPYRIGHT &copy IMSHENGLI.COM 2016","modify_label":"本文最后修订于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/imshengli"},"sharing":{"weibo":true,"all":["weibo"]},"emphasize":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhangshengli@imshengli.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NodeJS 文档整理","language":"zh-hans","links":{"sharing":{"all":["weibo"],"facebook":false,"google":null,"twitter":false,"weibo":true},"sidebar":{"ImShengli":"http://imshengli.com"}},"gitbook":"*","description":""},"file":{"path":"async/pattern.md","mtime":"2016-07-18T14:27:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-18T14:29:04.612Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
