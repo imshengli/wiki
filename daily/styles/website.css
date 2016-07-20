@@ -1,0 +1,28 @@
+.markdown-section code {
+    border-radius: 3px;
+    border: 1px solid #F0F0F0;
+    color: #d14;
+}
+.markdown-section pre {
+   border: 1px solid #F0F0F0;
+   border-radius: 3px;
+}
+.markdown-section pre code {
+    border-radius: 0;
+    border: 0;
+    color: #333;
+}
+.markdown-section blockquote {
+    background-color: rgba(102,128,153,.05);  
+    padding: 2px 10px 0;  
+    border-left-color: #FB9E98; 
+}
+.book-summary ul.summary li a:hover {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+}
+.book .book-summary .exc-trigger {
+    font-size: 12px;
+    left: 13px;
+    color: #BBB;
+}
