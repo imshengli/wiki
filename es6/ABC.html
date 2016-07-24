@@ -1,0 +1,669 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <title>1. ES6 概览 · ES6</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="author" content="zhangshengli@imshengli.com">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="variable.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://imshengli.com" target="_blank" class="custom-link">ImShengli</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    0. ES6 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="ABC.html">
+            
+                <a href="ABC.html">
+            
+                    
+                    1. ES6 概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="variable.html">
+            
+                <a href="variable.html">
+            
+                    
+                    2. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >1. ES6 概览</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="es6-&#x5FC5;&#x77E5;&#x5FC5;&#x4F1A;">ES6 &#x5FC5;&#x77E5;&#x5FC5;&#x4F1A;</h2><h3 id="&#x53D8;&#x91CF;&#x548C;&#x53C2;&#x6570;">&#x53D8;&#x91CF;&#x548C;&#x53C2;&#x6570;</h3><h4 id="let"><code>let</code></h4><ul><li>&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF1B;
+</li>
+<li>&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x58F0;&#x660E;&#xFF1B;
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">10</span>; i++) {
+  setTimeout(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(i)
+  }, <span class="hljs-number">100</span>)
+}
+<span class="hljs-comment">// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</span></code></pre>
+<h4 id="const"><code>const</code></h4><ul><li>&#x5B9A;&#x4E49;&#x5E38;&#x91CF;&#xFF1B;
+</li>
+<li>&#x4E0D;&#x53EF;&#x53EA;&#x58F0;&#x660E;&#x4E0D;&#x8D4B;&#x503C;&#xFF1B;
+</li>
+<li>&#x5BF9;&#x8C61;&#x5E38;&#x91CF;&#x4E2D;&#xFF0C;key&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x662F;&#x53EF;&#x53D8;&#x7684;&#xFF1B;
+</li></ul>
+<h3 id="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h3><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">work</span>(<span class="hljs-params">name = &apos;Bender&apos;</span>) </span>{
+  <span class="hljs-keyword">return</span> name
+}
+work()
+<span class="hljs-comment">// Bender</span></code></pre>
+<h3 id="&#x6570;&#x7EC4;">&#x6570;&#x7EC4;</h3><pre><code class="lang-js"><span class="hljs-keyword">let</span> a = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]
+
+<span class="hljs-keyword">let</span> values = [...a.values()]
+<span class="hljs-comment">// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span>
+
+<span class="hljs-keyword">let</span> keys = [...a.keys()]
+<span class="hljs-comment">// [0, 1, 2]</span>
+
+<span class="hljs-keyword">let</span> entries = [...a.entries()]
+[[<span class="hljs-number">0</span>,<span class="hljs-string">&apos;a&apos;</span>],[<span class="hljs-number">1</span>,<span class="hljs-string">&apos;b&apos;</span>],[<span class="hljs-number">2</span>,<span class="hljs-string">&apos;c&apos;</span>]]
+
+
+<span class="hljs-built_in">Array</span>.from(a.values())
+<span class="hljs-comment">// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span></code></pre>
+<h3 id="&#x5BF9;&#x8C61;">&#x5BF9;&#x8C61;</h3><pre><code class="lang-js"><span class="hljs-keyword">let</span> foo = <span class="hljs-built_in">Object</span>.assign({}, {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>}, {a: <span class="hljs-string">&apos;a&apos;</span>, c: <span class="hljs-string">&apos;c&apos;</span>})
+<span class="hljs-comment">// {a: &apos;a&apos;, b: 2, c: &apos;c&apos;}</span>
+
+<span class="hljs-keyword">let</span> key2 = <span class="hljs-string">&apos;second&apos;</span>
+<span class="hljs-keyword">let</span> bar = {
+  key1: <span class="hljs-string">&apos;hello&apos;</span>,
+  [key2 + <span class="hljs-string">&apos;Key&apos;</span>]: <span class="hljs-string">&apos;world&apos;</span>
+}
+
+bar.secondKey === <span class="hljs-string">&apos;world&apos;</span></code></pre>
+<h3 id="rest&#x53C2;&#x6570;"><code>rest</code>&#x53C2;&#x6570;</h3><p><code>...args</code>&#x53EA;&#x80FD;&#x51FA;&#x73B0;&#x5728;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;;</p><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params">...args</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(args);
+}
+
+foo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+<span class="hljs-comment">// [1, 2, 3]</span>
+
+foo()
+<span class="hljs-comment">// []</span></code></pre>
+<h3 id="&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;">&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;</h3><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params">a, b, c</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b + c
+}
+
+foo(...[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+<span class="hljs-comment">// 6</span></code></pre>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x6269;&#x5C55;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</p><pre><code class="lang-js"><span class="hljs-keyword">let</span> a = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+<span class="hljs-keyword">let</span> b = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ...a, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]
+
+<span class="hljs-built_in">console</span>.log(b)
+<span class="hljs-comment">// [1, 2, 3, 4, 5, 6, 7]</span></code></pre>
+<h3 id="&#x89E3;&#x6784;&#x8D4B;&#x503C;">&#x89E3;&#x6784;&#x8D4B;&#x503C;</h3><pre><code class="lang-js"><span class="hljs-comment">// &#x89E3;&#x6784;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">let</span> values = [<span class="hljs-number">42</span>, <span class="hljs-number">73</span>]
+<span class="hljs-keyword">let</span> [a, b] = values
+
+<span class="hljs-built_in">console</span>.log(a, b)
+<span class="hljs-comment">// 42, 73</span>
+
+<span class="hljs-comment">// &#x89E3;&#x6784;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">let</span> bender = {name: <span class="hljs-string">&apos;Bender&apos;</span>, hobby: <span class="hljs-string">&apos;drinking&apos;</span>}
+<span class="hljs-keyword">let</span> {name, hobby} = bender
+
+<span class="hljs-built_in">console</span>.log(name, hobby)
+<span class="hljs-comment">// Bender, drinking</span>
+
+<span class="hljs-comment">// &#x8C03;&#x6362;&#x53D8;&#x91CF;&#x503C;</span>
+<span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>, b = <span class="hljs-number">2</span>
+[a, b] = [b, a]
+
+<span class="hljs-built_in">console</span>.log(a, b)
+<span class="hljs-comment">// 2, 1</span></code></pre>
+<h3 id="&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;</h3><pre><code class="lang-js"><span class="hljs-keyword">let</span> name = <span class="hljs-string">&apos;Bender&apos;</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-string">`Hello, <span class="hljs-subst">${name}</span>`</span>
+
+<span class="hljs-built_in">console</span>.log(result)
+<span class="hljs-comment">// Hello, Bender</span>
+
+<span class="hljs-comment">// &#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x8868;&#x8FBE;&#x5F0F;</span>
+<span class="hljs-keyword">let</span> a = <span class="hljs-number">42</span>, b = <span class="hljs-number">73</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-string">`a + b is <span class="hljs-subst">${a + b}</span>`</span>
+
+<span class="hljs-built_in">console</span>.log(result)
+<span class="hljs-comment">// a + b is 115</span>
+
+<span class="hljs-comment">// &#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x53EF;&#x4EE5;&#x6362;&#x884C;</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-string">`Hello
+ there, Bender!
+`</span>
+<span class="hljs-built_in">console</span>.log(result)
+<span class="hljs-comment">// Hello\n there, Bender!</span></code></pre>
+<h3 id="&#x5E26;&#x6807;&#x7B7E;&#x7684;&#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;">&#x5E26;&#x6807;&#x7B7E;&#x7684;&#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;</h3><ul><li>&#x6807;&#x7B7E;&#x51FD;&#x6570;&#x4E0E;&#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x751A;&#x81F3;&#x6362;&#x884C;&#x7B26;
+</li>
+<li>&#x6807;&#x7B7E;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x662F;&#x6A21;&#x7248;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x7EC8;&#x7ED3;&#x679C;
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> name = <span class="hljs-string">&apos;Bender&apos;</span>
+<span class="hljs-keyword">let</span> result = test <span class="hljs-string">`Hello,<span class="hljs-subst">${name}</span>!`</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span>(<span class="hljs-params">literals, ...values</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(literals) <span class="hljs-comment">// [&apos;Hello,&apos;, &apos;!&apos;]</span>
+  <span class="hljs-built_in">console</span>.log(values)   <span class="hljs-comment">// [&apos;Bender&apos;]</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;test&apos;</span>
+}
+
+<span class="hljs-built_in">console</span>.log(result)
+<span class="hljs-comment">// test</span></code></pre>
+<h3 id="&#x7C7B;">&#x7C7B;</h3><h4 id="class&#x5173;&#x952E;&#x5B57;"><code>class</code>&#x5173;&#x952E;&#x5B57;</h4><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-keyword">let</span> animal = <span class="hljs-keyword">new</span> Animal()</code></pre>
+<p><code>constructor</code> &#x65B9;&#x6CD5;</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name
+  }
+
+  getName() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._name
+  }
+}
+
+<span class="hljs-keyword">let</span> animal = <span class="hljs-keyword">new</span> Animal(<span class="hljs-string">&apos;kitty&apos;</span>)
+animal.getName()
+<span class="hljs-comment">// kitty</span></code></pre>
+<p>&#x5C5E;&#x6027;</p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name
+  }
+
+  get name() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._name
+  }
+
+  set name(newName) {
+    <span class="hljs-keyword">this</span>._name = newName
+  }
+}
+
+<span class="hljs-keyword">let</span> animal = <span class="hljs-keyword">new</span> Animal(<span class="hljs-string">&apos;kitty&apos;</span>)
+<span class="hljs-built_in">console</span>.log(animal.name)
+<span class="hljs-comment">// kitty</span></code></pre>
+<h4 id="&#x7C7B;&#x7684;&#x7EE7;&#x627F;">&#x7C7B;&#x7684;&#x7EE7;&#x627F;</h4><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name
+  }
+
+  get name() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._name
+  }
+
+  set name(newName) {
+    <span class="hljs-keyword">this</span>._name = newName
+  }
+
+  say() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;I am an animal&apos;</span>
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name, pet) {
+    <span class="hljs-keyword">super</span>(name)
+    <span class="hljs-keyword">this</span>._pet = pet
+  }
+
+  get pet() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._pet
+  }
+}
+
+<span class="hljs-keyword">let</span> cat = <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&apos;kitty&apos;</span>, <span class="hljs-string">&apos;Bender&apos;</span>)
+<span class="hljs-built_in">console</span>.log(cat.pet)
+<span class="hljs-comment">// Bender</span></code></pre>
+<p>&#x5728;&#x666E;&#x901A;&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528; <code>super</code></p><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-comment">// ...</span>
+  say() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>() + <span class="hljs-string">&apos;!&apos;</span>
+  }
+}
+
+<span class="hljs-comment">// &#x6216;&#x8005;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+  <span class="hljs-comment">// ...</span>
+  say() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.say() + <span class="hljs-string">&apos;!&apos;</span>
+  }
+}</code></pre>
+<h4 id="&#x7C7B;&#x7684;&#x672C;&#x8D28;">&#x7C7B;&#x7684;&#x672C;&#x8D28;</h4><pre><code class="lang-js"><span class="hljs-keyword">let</span> cat = <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&apos;kitty&apos;</span>)
+
+cat instanceOf Cat
+<span class="hljs-comment">// true</span>
+
+cat instanceOf Animal
+<span class="hljs-comment">// true</span></code></pre>
+<h3 id="&#x51FD;&#x6570;&#x5F0F;&#x7279;&#x6027;">&#x51FD;&#x6570;&#x5F0F;&#x7279;&#x6027;</h3><h4 id="&#x7BAD;&#x5934;&#x51FD;&#x6570;">&#x7BAD;&#x5934;&#x51FD;&#x6570;</h4><pre><code class="lang-js"><span class="hljs-keyword">let</span> add = (a, b) =&gt; a + b</code></pre>
+<p>&#x53C2;&#x6570;&#x5468;&#x56F4;&#x7684;&#x62EC;&#x53F7;</p><pre><code class="lang-js"><span class="hljs-keyword">let</span> add = (x, y) =&gt; x + y <span class="hljs-comment">// &#x5FC5;&#x9700;</span>
+<span class="hljs-keyword">let</span> square = x =&gt; x * x <span class="hljs-comment">// &#x4E0D;&#x5FC5;&#x9700;</span>
+<span class="hljs-keyword">let</span> compute = () =&gt; square(add(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>)) <span class="hljs-comment">// &#x5FC5;&#x9700;</span>
+
+<span class="hljs-keyword">let</span> result = compute()
+<span class="hljs-comment">// 64</span></code></pre>
+<p>&#x51FD;&#x6570;&#x4F53;&#x7684;&#x5927;&#x62EC;&#x53F7;</p><pre><code class="lang-js"><span class="hljs-comment">// &#x6B63;&#x5E38;&#x8FD0;&#x884C;</span>
+<span class="hljs-keyword">let</span> add = (x, y) =&gt; x + y
+<span class="hljs-comment">// &#x6216;&#x8005;</span>
+<span class="hljs-keyword">let</span> add = (x, y) =&gt; { <span class="hljs-keyword">return</span> x + y }
+
+<span class="hljs-comment">// &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61; {a: 1}</span>
+
+<span class="hljs-comment">// &#x5931;&#x8D25;</span>
+<span class="hljs-keyword">let</span> test = () =&gt; { a: <span class="hljs-number">1</span> }
+
+<span class="hljs-comment">// &#x6210;&#x529F;</span>
+<span class="hljs-keyword">let</span> test = () =&gt; ({ a: <span class="hljs-number">1</span> })
+<span class="hljs-comment">// &#x6216;&#x8005;</span>
+<span class="hljs-keyword">let</span> test = () =&gt; {
+  <span class="hljs-keyword">return</span> {a: <span class="hljs-number">1</span>}
+}</code></pre>
+<h4 id="&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x548C;this">&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x548C;<code>this</code></h4><pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{
+  <span class="hljs-keyword">constructor</span>(name) {
+    <span class="hljs-keyword">this</span>._name = name
+  }
+
+  later() {
+    setTimeout(() =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>._name), <span class="hljs-number">100</span>)
+  }
+
+}
+
+<span class="hljs-keyword">let</span> a = <span class="hljs-keyword">new</span> A(<span class="hljs-string">&apos;Bender&apos;</span>)
+a.later()
+<span class="hljs-comment">// Bender</span></code></pre>
+<h3 id="symbol">Symbol</h3><ul><li>&#x65E0;&#x9700; <code>new</code> &#x5173;&#x952E;&#x5B57;
+</li>
+<li>&#x552F;&#x4E00;&#x6027;
+</li>
+<li>&#x4E0D;&#x53EF;&#x679A;&#x4E3E;
+</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>Object.getOwnPropertySymbols</code>
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> s1 = <span class="hljs-built_in">Symbol</span>()
+
+s1.toString()
+<span class="hljs-comment">// Symbol()</span>
+<span class="hljs-keyword">typeof</span> s1
+<span class="hljs-comment">// symbol</span>
+
+<span class="hljs-keyword">let</span> s2 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;a symbol&apos;</span>)
+
+<span class="hljs-keyword">typeof</span> s2
+<span class="hljs-comment">// symbol</span>
+s2.toString()
+<span class="hljs-comment">// Symbol(a symbol)</span></code></pre>
+<p>&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</p><pre><code class="lang-js"><span class="hljs-keyword">let</span> foo = <span class="hljs-string">&apos;foo&apos;</span>
+<span class="hljs-keyword">let</span> bar = <span class="hljs-built_in">Symbol</span>()
+
+<span class="hljs-keyword">let</span> obj = {
+  foo: foo,
+  [bar]: <span class="hljs-string">&apos;bar&apos;</span> <span class="hljs-comment">// &#x6CE8;&#x610F;&#x65B0;&#x8BED;&#x6CD5;</span>
+}
+
+<span class="hljs-built_in">console</span>.log(obj.foo)
+<span class="hljs-comment">// foo</span>
+<span class="hljs-built_in">console</span>.log(obj[bar])
+<span class="hljs-comment">// bar</span></code></pre>
+<h3 id="iterable">Iterable</h3><p>&#x6709; [Symbol.iterator] &#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;</p><pre><code class="lang-js"><span class="hljs-keyword">let</span> iterable = {
+  index: <span class="hljs-number">0</span>,
+  [<span class="hljs-built_in">Symbol</span>.iterator]() {
+    <span class="hljs-keyword">return</span> {
+      next: () =&gt; {
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.index &lt; <span class="hljs-number">5</span>) {
+          <span class="hljs-keyword">this</span>.index++
+          <span class="hljs-keyword">return</span> {done: <span class="hljs-literal">false</span>, value: <span class="hljs-keyword">this</span>.index<span class="hljs-number">-1</span>}
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> {done: <span class="hljs-literal">true</span>, value: <span class="hljs-keyword">this</span>.index}
+        }
+      }
+    }
+  }
+}
+
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> iterable) {
+  <span class="hljs-built_in">console</span>.log(i)
+}
+<span class="hljs-comment">// 1, 2, 3, 4</span></code></pre>
+<h3 id="generator">generator</h3><pre><code class="lang-js"><span class="hljs-keyword">let</span> numbers = <span class="hljs-function"><span class="hljs-keyword">function</span>* (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span>
+  <span class="hljs-keyword">yield</span> <span class="hljs-number">2</span>
+  <span class="hljs-keyword">yield</span> <span class="hljs-number">3</span>
+}
+
+<span class="hljs-keyword">let</span> generator = numbers()
+
+generator.next()
+<span class="hljs-comment">// {&quot;value&quot;: 1, &quot;done&quot;: false}</span>
+
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> generator) {
+  <span class="hljs-built_in">console</span>.log(i)
+}
+<span class="hljs-comment">// 2, 3</span>
+
+generator.next()
+<span class="hljs-comment">// {&quot;done&quot;: true}</span></code></pre>
+<p><code>next</code>&#x4F20;&#x503C;</p><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">foo</span>(<span class="hljs-params">x</span>) </span>{
+  <span class="hljs-keyword">var</span> y = <span class="hljs-number">2</span> * (<span class="hljs-keyword">yield</span> (x + <span class="hljs-number">1</span>));
+  <span class="hljs-keyword">var</span> z = <span class="hljs-keyword">yield</span> (y / <span class="hljs-number">3</span>);
+  <span class="hljs-keyword">return</span> (x + y + z);
+}
+
+<span class="hljs-keyword">var</span> it = foo(<span class="hljs-number">5</span>);
+
+<span class="hljs-built_in">console</span>.log(it.next());     <span class="hljs-comment">// { &quot;value&quot;: 6, &quot;done&quot;: false }</span>
+<span class="hljs-built_in">console</span>.log(it.next(<span class="hljs-number">12</span>));   <span class="hljs-comment">// { &quot;value&quot;: 8, &quot;done&quot;: false }</span>
+<span class="hljs-built_in">console</span>.log(it.next(<span class="hljs-number">13</span>));   <span class="hljs-comment">// { &quot;value&quot;: 42, &quot;done&quot;: true }</span></code></pre>
+<h3 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h3><h4 id="export"><code>export</code></h4><pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> foo
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">let</span> foo = <span class="hljs-string">&apos;foo&apos;</span>
+
+<span class="hljs-keyword">export</span> {foo, bar}
+
+<span class="hljs-keyword">export</span> {foo <span class="hljs-keyword">as</span> bar}
+
+<span class="hljs-keyword">export</span> {foo <span class="hljs-keyword">as</span> <span class="hljs-keyword">default</span>} <span class="hljs-comment">// &#x7B49;&#x4EF7;&#x4E8E; export default foo</span></code></pre>
+<h4 id="import"><code>import</code></h4><pre><code class="lang-js"><span class="hljs-keyword">import</span> foo <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;foo&apos;</span>
+
+<span class="hljs-keyword">import</span> {foo, bar} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;baz&apos;</span>
+
+<span class="hljs-keyword">import</span> {foo <span class="hljs-keyword">as</span> bar} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;baz&apos;</span>
+
+<span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;foo&apos;</span>
+
+<span class="hljs-keyword">import</span> {deafult <span class="hljs-keyword">as</span> foo} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;foo&apos;</span>
+
+<span class="hljs-keyword">import</span> foo, {bar, baz} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;foo&apos;</span>
+
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> foo <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;foo&apos;</span>
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;foo&apos;</span></code></pre>
+<h4 id="&#x7279;&#x70B9;">&#x7279;&#x70B9;</h4><ul><li>&#x6A21;&#x5757;&#x662F;&#x4E00;&#x79CD;&#x7ED1;&#x5B9A;
+</li>
+<li>&#x652F;&#x6301;&#x5FAA;&#x73AF;&#x4F9D;&#x8D56;
+</li>
+<li>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF1A;default export
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-comment">//------ lib.js ------</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">let</span> counter = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inc</span>(<span class="hljs-params"></span>) </span>{
+  counter++;
+}
+
+<span class="hljs-comment">//------ main.js ------</span>
+<span class="hljs-keyword">import</span> {inc, counter} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lib&apos;</span>;
+<span class="hljs-built_in">console</span>.log(counter);
+<span class="hljs-comment">// 0</span>
+inc();
+<span class="hljs-built_in">console</span>.log(counter);
+<span class="hljs-comment">// 1</span></code></pre>
+<h3 id="promise">Promise</h3><pre><code class="lang-js"><span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+  <span class="hljs-comment">// ...</span>
+})
+
+p.then(fulfillHandler, rejectHandler)
+  .catch(errorHandler)</code></pre>
+<h4 id="&#x94FE;&#x5F0F;&#x8C03;&#x7528;">&#x94FE;&#x5F0F;&#x8C03;&#x7528;</h4><pre><code class="lang-js"><span class="hljs-keyword">let</span> calculate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+      resolve(value + <span class="hljs-number">1</span>)
+    }, <span class="hljs-number">0</span>)
+  })
+}
+<span class="hljs-comment">// then &#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684; promise</span>
+calculate(<span class="hljs-number">1</span>)
+  .then(calculate)
+  .then(calculate)
+  .then(result =&gt; <span class="hljs-built_in">console</span>.log(result))
+<span class="hljs-comment">// 4</span></code></pre>
+<h3 id="map">Map</h3><ul><li>Map &#x7684;&#x952E;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;
+</li>
+<li>Map &#x662F; iterable &#x5BF9;&#x8C61;
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>()
+
+map.set(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-number">42</span>)
+
+map.get(<span class="hljs-string">&apos;key&apos;</span>)
+<span class="hljs-comment">// 42</span>
+
+map.has(<span class="hljs-string">&apos;key&apos;</span>)
+<span class="hljs-comment">// true</span>
+
+map.delete(<span class="hljs-string">&apos;key&apos;</span>)
+
+map.has(<span class="hljs-string">&apos;key&apos;</span>)
+<span class="hljs-comment">// false</span></code></pre>
+<h3 id="set">Set</h3><ul><li>Set &#x4E2D;&#x5143;&#x7D20;&#x6BD4;&#x8F83;&#x7684;&#x662F;&#x5176;&#x5F15;&#x7528;&#x503C;
+</li></ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+
+set.size
+<span class="hljs-comment">// 3</span>
+
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> set) {
+  <span class="hljs-built_in">console</span>.log(i)
+}
+<span class="hljs-comment">// 1, 2, 3</span>
+
+<span class="hljs-keyword">let</span> o = {foo: <span class="hljs-number">1</span>}
+<span class="hljs-keyword">let</span> s = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>()
+s.add(o)
+s.add(o)
+s.add({foo: <span class="hljs-number">1</span>})
+
+s.size
+<span class="hljs-comment">// 2</span>
+s.has({foo: <span class="hljs-number">1</span>})
+<span class="hljs-comment">// false</span></code></pre>
+<footer class="page-footer"><span class="copyright">COPYRIGHT &#xA9; IMSHENGLI.COM 2016 ALL RIGHTS RESERVED.</span><span class="footer-modification">&#x672C;&#x6587;&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A;
+2016-07-24 18:51:30
+</span></footer>
+
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 0. ES6 简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="variable.html" class="navigation navigation-next " aria-label="Next page: 2. 变量">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1. ES6 概览","level":"1.2","depth":1,"next":{"title":"2. 变量","level":"1.3","depth":1,"path":"variable.md","ref":"variable.md","articles":[]},"previous":{"title":"0. ES6 简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-sharing","-livereload","tbfed-pagefooter","github","emphasize","expandable-chapters","todo"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"COPYRIGHT &copy IMSHENGLI.COM 2016","modify_label":"本文最后修订于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"github":{"url":"https://github.com/imshengli"},"todo":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"weibo":true,"all":["weibo"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"zhangshengli@imshengli.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ES6","language":"zh-hans","links":{"sharing":{"all":["weibo"],"facebook":false,"google":null,"twitter":false,"weibo":true},"sidebar":{"ImShengli":"http://imshengli.com"}},"gitbook":"*","description":""},"file":{"path":"ABC.md","mtime":"2016-07-24T10:51:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-24T13:08:52.099Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
